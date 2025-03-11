@@ -1,0 +1,32 @@
+---
+Default:
+  workload_name: "Redis"
+  vm_exec_modes: "LEGACY,TD"
+  client_results_path: "/root/redis/redis-7.0.0/log/set/"
+  rw_ratio: "1:1"
+  server_size: 4
+  server_port: 9001
+  iterations: 10
+  td_vm_image: "/home/root123/vasanth/tdx/guest-tools/image/tdx-guest-ubuntu-24.04-generic.qcow2"
+  legacy_vm_image: "/home/root123/vasanth/tdx/guest-tools/image/tdx-guest-ubuntu-24.04-generic.qcow2"
+  td_kernel: "/boot/config-6.8.0-1015-intel"
+  legacy_kernel: "/boot/config-6.8.0-55-generic"
+  td_domain_name: "TD_DOMAIN"
+  legacy_domain_name: "LEGACY_DOMAIN"
+  vm_memory: 16
+  td_vm_loader: "/usr/share/qemu/OVMF.fd"
+  legacy_vm_loader: "/usr/share/qemu/OVMF.fd"
+
+track_redis_perf_1024_data_size_1_1_rw_ratio:
+  data_size: 1024
+
+track_redis_perf_1024_data_size_1_9_rw_ratio:
+  data_size: 1024
+  rw_ratio: "1:9"
+
+track_redis_perf_8192_data_size_1_1_rw_ratio:
+  data_size: 8192
+
+track_redis_perf_8192_data_size_1_9_rw_ratio:
+  data_size: 8192
+  rw_ratio: "1:9"
