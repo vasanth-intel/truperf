@@ -143,6 +143,8 @@ def copy_and_dump_vm_xml(tcd):
     """
     Copy and dump VM XML templates based on the execution modes defined in the test configuration dictionary.
     """
+    templates_dir = os.path.join(FRAMEWORK_HOME_DIR, "vmm_libs", "templates")
+    os.makedirs(templates_dir, exist_ok=True)
     if "TD" in tcd['vm_exec_modes']:
         src_file = os.path.join(FRAMEWORK_HOME_DIR, "data", "tdx-base.xml.template")
         dest_file = os.path.join(FRAMEWORK_HOME_DIR, "vmm_libs", "templates", "tdx-base.xml")
